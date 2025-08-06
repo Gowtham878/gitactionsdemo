@@ -1,16 +1,11 @@
-import express from 'express'
+import * as lod from 'lodash'
 
-
-app = express()
-
-app.use(json())
-//hellosastt
-
-
-app.listen(process.env.PORT,(req,res)=>{
-    console.log("App running dawg")
-    function login() {
-  console.log("Login from feature main");
-}
-
-})
+export const handler = async (event) => {
+  const random  = lod.random(10)
+  console.log("event: ", event)
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify(`The random value is: ${random}`),
+  };
+  return response;
+};
