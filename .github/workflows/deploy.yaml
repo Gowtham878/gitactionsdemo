@@ -26,7 +26,9 @@ jobs:
 
       - name: Zip the Lambda package
         run: zip -r function.zip . -x "*.git*" "node_ modules/aws-sdk/*" "secret.txt"
-         name: Create .env.json for Lambda
+        
+        
+      - name: Create .env.json for Lambda
         run: |
           echo '{
             "port": "${{ secrets.port }}",
