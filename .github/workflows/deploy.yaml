@@ -30,13 +30,11 @@ jobs:
         
       - name: Create .env.json for Lambda
         run: |
-          echo '{
-            "url": "${{ secrets.URL }}",
-            "dbase": "${{ secrets.DBASE}}",
-            "collections": "${{ secrets.COLLECTIONS}}
-          }' >> .env
+            echo "url=${{ secrets.URL }}" >> .env
+            echo "dbase=${{ secrets.DBASE }}" >> .env
+            echo "collections=${{ secrets.COLLECTIONS }}" >> .env
 
-          ls 
+          ls -a
 
           
       # - name: Run tests
