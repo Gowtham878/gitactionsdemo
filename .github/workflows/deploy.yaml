@@ -36,7 +36,7 @@ jobs:
             "collections": "${{ secrets.COLLECTIONS}}
           }' >> .env
 
-          cat env
+          cat .env
 
           
       # - name: Run tests
