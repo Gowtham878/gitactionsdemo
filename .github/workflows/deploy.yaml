@@ -34,7 +34,7 @@ jobs:
           echo "dbase=${{ secrets.DBASE }}" >> .env
           echo "collections=${{ secrets.COLLECTIONS }}" >> .env
 
-          ls 
+          ls -a 
 
 
 
