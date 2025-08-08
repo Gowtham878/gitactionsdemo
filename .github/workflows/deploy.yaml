@@ -31,8 +31,9 @@ jobs:
       - name: Create .env.json for Lambda
         run: |
           echo '{
-            "port": "${{ secrets.port }}",
-            "url": "${{ secrets.url }}"
+            "url": "${{ secrets.URL }}",
+            "dbase": "${{ secrets.DBASE}}",
+            "collections": "${{ secrets.COLLECTIONS}}
           }'
       # - name: Run tests
       #   run: npm test
