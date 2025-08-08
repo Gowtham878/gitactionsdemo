@@ -34,8 +34,9 @@ jobs:
             echo "dbase=${{ secrets.DBASE }}" >> .env
             echo "collections=${{ secrets.COLLECTIONS }}" >> .env
 
-          ls -a
+          ls 
           
+
 
           
       # - name: Run tests
